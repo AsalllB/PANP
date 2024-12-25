@@ -16,3 +16,5 @@ void ResetColor();
 int random_number();
 
 void typing(std::string text, bool next_line = true);
+
+void enableAnsiSupport();

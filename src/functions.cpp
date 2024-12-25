@@ -1,6 +1,7 @@
 #include <iostream>
 #include <thread>
 #include <chrono>
+#include <windows.h>
 
 using namespace std;
 
@@ -71,4 +72,18 @@ void typing(string text, bool next_line)
   {
     cout << "\x1b[" + to_string(printed_text.length()) + "C";
   }
+}
+
+void enableAnsiSupport()
+{
+  HANDLE hOut = GetStdHandle(STD_OUTPUT_HANDLE);
+  if (hOut == INVALID_HANDLE_VALUE)
+    return;
+
+  DWORD dwMode = 0;
+  if (!GetConsoleMode(hOut, &dwMode))
+    return;
+
+  dwMode |= ENABLE_VIRTUAL_TERMINAL_PROCESSING;
+  SetConsoleMode(hOut, dwMode);
 }

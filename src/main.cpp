@@ -12,6 +12,7 @@ int main()
 {
   // Seed random number generator with current time to generate real random numbers.
   srand(static_cast<unsigned int>(time(0)));
+  enableAnsiSupport();
 
   int n;
   double sum = 0;

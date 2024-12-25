@@ -18,8 +18,7 @@ enum Position
  * @param position Position of cursor, DOWN or UP.
  * @param update_msg A new message which you want to replace with old message.
  */
-void
-update_console(int line_number, Position position, string update_msg)
+void update_console(int line_number, Position position, string update_msg)
 {
   if (position == 2)
   {
@@ -51,4 +50,25 @@ void ResetColor() { cout << "\033[0m"; }
 int random_number()
 {
   return (rand() % 5) + 1;
+}
+
+void typing(string text, bool next_line)
+{
+  string printed_text;
+
+  for (char c : text)
+  {
+    printed_text += c;
+    cout << printed_text << "\r";
+    sleep(50);
+  }
+
+  if (next_line)
+  {
+    cout << endl;
+  }
+  else
+  {
+    cout << "\x1b[" + to_string(printed_text.length()) + "C";
+  }
 }

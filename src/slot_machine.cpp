@@ -6,19 +6,24 @@ using namespace std;
 
 std::string slot_row(int num1, int num2, int num3)
 {
-    return "| " + to_string(num1) + " | " + to_string(num2) + " | " + to_string(num3) + " |";
+    return " | " + to_string(num1) + " | " + to_string(num2) + " | " + to_string(num3) + " |";
 }
 
 void slot_machine(int finalNumber)
 {
     int rounds = 100;
     int maxRounds = rounds;
-
-    cout << "|-----------|\n";
-    cout << "|   |   |   |\n";
-    cout << "| 0 | 0 | 0 |\n";
-    cout << "|   |   |   |\n";
-    cout << "|-----------|";
+    
+    cout << "     _____\n";
+    cout << "    /#####\\\n";
+    cout << "  /#########\\\n";
+    cout << " |-----------|\n";
+    cout << " |   |   |   |\n";
+    cout << " | 0 | 0 | 0 |\n";
+    cout << " |   |   |   |\n";
+    cout << " |-----------|\n";
+    cout << "/@@@@@@@@@@@@@\\\n";
+    cout << "---------------";
 
     int num1 = 0;
     int num2 = 0;
@@ -32,7 +37,7 @@ void slot_machine(int finalNumber)
 
         if (rounds == maxRounds)
         {
-            update_console(2, UP, slot_row(1, 1, 1));
+            update_console(4, UP, slot_row(1, 1, 1));
         }
         else
         {

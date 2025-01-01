@@ -53,7 +53,7 @@ int random_number()
   return (rand() % 5) + 1;
 }
 
-void typing(string text, bool next_line)
+void typing(string text, bool next_line, int speed)
 {
   string printed_text;
 
@@ -61,7 +61,7 @@ void typing(string text, bool next_line)
   {
     printed_text += c;
     cout << printed_text << "\r";
-    sleep(50);
+    sleep(speed);
   }
 
   if (next_line)

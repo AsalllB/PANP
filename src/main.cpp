@@ -47,9 +47,30 @@ int main()
 
   update_console(4, DOWN, "");
 
-  sleep(500);
+  sleep(2000);
 
-  typing("Subject number " + to_string(subject_number) + " selected!");
+  system("cls");
+
+  // typing("Subject number " + to_string(subject_number) + " selected!");
+  typing("/   /                                     /   /", true, 5);
+  typing("| O |                                     | O |", true, 5);
+  typing("|   |- - - - - - - - - - - - - - - - - - -|   |", true, 5);
+  typing("| O |                                     | O |", true, 5);
+  typing("|   |  P R O C C E S S   R E P O R T      |   |", true, 5);
+  typing("| O |                                     | O |", true, 5);
+  typing("|   |                                     |   |", true, 5);
+  typing("| O |                                     | O |", true, 5);
+  typing("|   |     S E L E C T E D                 |   |", true, 5);
+  typing("| O |                                     | O |", true, 5);
+  typing("|   |         S U B J E C T               |   |", true, 5);
+  typing("| O |                                     | O |", true, 5);
+  typing("|   |             I S :                   |   |", true, 5);
+  typing("| O |                                     | O |", true, 5);
+  typing("|   |    This is a surprise (number "+ to_string(subject_number) +")    |   |", true, 5);
+  typing("| O |                                     | O |", true, 5);
+  typing("|   |                                     |   |", true, 5);
+  typing("| O |- - - - - - - - - - - - - - - - - - -| O |", true, 5);
+  typing("|   |                                     |   |", true, 5);
 
   return 0;
 }

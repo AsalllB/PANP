@@ -15,6 +15,6 @@ void ResetColor();
 
 int random_number();
 
-void typing(std::string text, bool next_line = true);
+void typing(std::string text, bool next_line = true, int speed = 50);
 
 void enableAnsiSupport();
